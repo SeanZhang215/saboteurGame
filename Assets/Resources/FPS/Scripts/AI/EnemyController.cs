@@ -311,7 +311,7 @@ namespace Unity.FPS.AI
         {
             if (NavMeshAgent)
             {
-                NavMeshAgent.SetDestination(destination);
+                // NavMeshAgent.SetDestination(destination);
             }
         }
 
