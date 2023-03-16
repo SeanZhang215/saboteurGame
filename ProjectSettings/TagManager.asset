@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - path
+  - Star
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Players
   - Water
   - UI
   - 
