@@ -820,7 +820,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da4c9e79fd0441faae8d801bec4faff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStar: {fileID: 0}
+  bridgePrefab: {fileID: 0}
+  numOfStarNeededForBridge: 5
 --- !u!195 &4113806827315151944
 NavMeshAgent:
   m_ObjectHideFlags: 0
