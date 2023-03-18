@@ -1079,8 +1079,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929005863
 MonoBehaviour:
@@ -1104,10 +1104,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1115,7 +1115,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: " Saboteur is a multiplayer, hidden identity, strategy game where players
+    take on different roles, either as miners or saboteurs, and work towards achieving
+    their individual goals while attempting to identify the roles of other players.
+    \n\nThe game involves constructing a path to a hidden treasure while using action
+    cards to overcome obstacles or disrupt other players' progress. \n\nThe game
+    is won by the team that reaches the treasure, with miners sharing the prize equally
+    and saboteurs earning more if they successfully prevent the miners from reaching
+    their goal. \n"
 --- !u!222 &1929005864
 CanvasRenderer:
   m_ObjectHideFlags: 0
