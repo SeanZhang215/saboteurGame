@@ -14,24 +14,21 @@ public class DwarfEnemyAI : MonoBehaviour
     public int numOfStarNeededForBridge = 5;
     public GameObject[] destinations;
 
-    // Reference to the bridge prefab to be instantiated
-
     private GameObject nearestDestination;
     private float minDistance = float.MaxValue;
 
-    // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(CheckIfCanGoToDestination()){
             return;
         }
+
         if (currentStar == null)
         {
             FindNearestStar();
@@ -42,17 +39,17 @@ public class DwarfEnemyAI : MonoBehaviour
             currentStar = null;
             FindNearestStar();
         }
+
         float speed = navMeshAgent.speed;
-        if (currentStar == null){
+        if (currentStar == null)
+        {
             speed = 0f;
         }
         animator.SetBool("isWalking", speed > 0f);
 
-        // Check if starsDestroyed is a multiple of 5, and create a bridge if it is
-        if (starsDestroyed % numOfStarNeededForBridge == 0 && starsDestroyed > 0)
+        if (starsDestroyed > 0 && starsDestroyed % numOfStarNeededForBridge == 0)
         {
-            float randomAngle = Random.Range(-180f, 180f);
-            Instantiate(bridgePrefab, transform.position, Quaternion.Euler(0f, randomAngle, 0f));
+            CreateBridge();
             starsDestroyed = 0;
         }
     }
@@ -66,9 +63,17 @@ public class DwarfEnemyAI : MonoBehaviour
         Destroy(obj);
         isDestroyingObject = false;
 
-        // Increment the starsDestroyed variable by 1
         starsDestroyed++;
     }
+
+    void CreateBridge()
+    {
+        float randomAngle = Random.Range(-180f, 180f);
+        float randomDistance = Random.Range(0f, 3f); // choose a random distance between 5 to 10 units
+        Vector3 bridgePosition = transform.position + Quaternion.Euler(0f, randomAngle, 0f) * Vector3.forward * 3.0f;
+        Instantiate(bridgePrefab, bridgePosition, Quaternion.Euler(0f, randomAngle, 0f));
+    }
+
 
     void FindNearestStar()
     {
@@ -93,28 +98,22 @@ public class DwarfEnemyAI : MonoBehaviour
         }
     }
 
-    bool CheckIfCanGoToDestination(){
-        nearestDestination = null;
-        minDistance = float.MaxValue;
-        // Check if any of the destinations are reachable
+    bool CheckIfCanGoToDestination()
+    {
         foreach (GameObject destination in destinations)
         {
             NavMeshPath path = new NavMeshPath();
-            if (navMeshAgent.CalculatePath(destination.transform.position, path))
+            if (NavMesh.CalculatePath(transform.position, destination.transform.position, NavMesh.AllAreas, path))
             {
-                float distance = Vector3.Distance(transform.position, destination.transform.position);
-                if (distance < minDistance)
+                if (path.status == NavMeshPathStatus.PathComplete)
                 {
                     nearestDestination = destination;
-                    minDistance = distance;
+                    navMeshAgent.SetDestination(nearestDestination.transform.position);
+                    return true;
                 }
             }
         }
-        if(nearestDestination != null){
-            navMeshAgent.SetDestination(nearestDestination.transform.position);
-            animator.SetBool("isWalking", true);
-            return true;
-        }
         return false;
     }
+
 }

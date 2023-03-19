@@ -822,6 +822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bridgePrefab: {fileID: 0}
   numOfStarNeededForBridge: 5
+  destinations: []
 --- !u!195 &4113806827315151944
 NavMeshAgent:
   m_ObjectHideFlags: 0

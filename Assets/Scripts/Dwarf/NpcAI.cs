@@ -50,17 +50,43 @@ public class NpcAI : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, 1f);
         int starCount = GameObject.FindGameObjectsWithTag("Star").Length;
         if (starCount >= maxStarInTheGame) return;
+
+        // Keep track of previously created star positions
+        List<Vector3> starPositions = new List<Vector3>();
+        GameObject[] stars = GameObject.FindGameObjectsWithTag("Star");
+        foreach (GameObject star in stars)
+        {
+            starPositions.Add(star.transform.position);
+        }
+
         foreach (Collider collider in colliders)
         {
             if (collider.tag == tag)
             {
                 Vector3 starPosition = collider.transform.position;
-                starPosition.y += 1.0f; // add 1 unit to Y-coordinate
-                Instantiate(starPrefab, starPosition, Quaternion.identity);
-                break;
+
+                // Check distance to existing star positions
+                bool tooClose = false;
+                foreach (Vector3 existingPosition in starPositions)
+                {
+                    if (Vector3.Distance(starPosition, existingPosition) < 1.5f)
+                    {
+                        tooClose = true;
+                        break;
+                    }
+                }
+
+                // If not too close, create new star
+                if (!tooClose)
+                {
+                    starPosition.y += 0.6f; // add 0.6 units to Y-coordinate
+                    Instantiate(starPrefab, starPosition, Quaternion.identity);
+                    break;
+                }
             }
         }
     }
+
 
     void OnDrawGizmosSelected()
     {
