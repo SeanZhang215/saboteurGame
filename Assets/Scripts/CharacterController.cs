@@ -38,7 +38,7 @@ public class CharacterController : MonoBehaviour
     jumpInput = Input.GetAxis("Jump");
 
     // Check if the character is grounded
-    //isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundLayer);
+    //isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundLayer, QueryTriggerInteraction.Ignore);
     isGrounded = true;
     // Create movement vector
     movement = transform.TransformDirection(new Vector3(horizontal, 0.0f, vertical));
@@ -47,11 +47,15 @@ public class CharacterController : MonoBehaviour
     if (movement != Vector3.zero)
     {
         animator.SetBool("isWalking", true);
+        //animator.SetBool("isDestroying", true);
     }
     else
     {
         animator.SetBool("isWalking", false);
+        //animator.SetBool("isDestroying", false);
     }
+
+    
 }
 
     // FixedUpdate is called at a fixed interval and is independent of frame rate
