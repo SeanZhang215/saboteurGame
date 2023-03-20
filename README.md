@@ -35,7 +35,7 @@ For those buttons, when the mouse is on the button, it will change the color and
 
 Besides, the in-game pause menu is installed by pressing the Esc. The in-game pause includes: pause, back to menu, quit the game.
 
-## 3D Character with Real-Time control & Physics - Shaopeng Zhang (SZHANG737) and Xingyu Chen (xchen863)
+## 3D Character with Real-Time control & Physics - Shaopeng Zhang (szhang737) and Xingyu Chen (xchen863)
 
 - Updated main camera from first-person perspective to non first -person perspective. Added script ThirdPersonCamera to enable a smooth camera motion and reasonable camera moving speed.
 - Added Character Controller script, the player can be better controlled for speed, turning motion, jumping motion, and destroying motion.
