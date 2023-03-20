@@ -41,8 +41,8 @@ Besides, the in-game pause menu is installed by pressing the Esc. The in-game pa
 - Worked with Xingyu Chen on Herballist Bag to add Destructible Object script so the Herballist Bag can be destructible.
 - Added a sphere to show 3D simulation with six degrees of freedom movement of rigid bodies. This object has Sphere Collider and Planet Controller script so it can move.
 
-## 3D Character with Real-Time control - Xingyu Chen (xchen863)
+## 3D Character with Real-Time control & Physics - Xingyu Chen (xchen863)
 - Updated main camera from first-person perspective to non first -person perspective. Added script ThirdPersonCamera to enable a smooth camera motion and reasonable camera moving speed.
-- Added new motions for the player so it can walk, jump, destroy and turn around. Updated player Animator Controller and Animation. Player speed and rotation speed were also adjusted to maintain consistent spatial simulation throughout. 
+- Added new motions for the player so it can walk, jump, destroy and turn around. Updated player Animator Controller and Animation. Player speed and rotation speed were also adjusted to maintain consistent spatial simulation throughout. For the action of jump, when pressing the "space" button, the player will be able to jump, and jump higher at the meantime when pressing the "space" button longer.
 - Worked with Shaopeng Zhang on Herballist Bag to add Destructible Object script so the Herballist Bag can be destructible.
 
