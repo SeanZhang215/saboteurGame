@@ -18,7 +18,7 @@ Xinlu Zhao implemented several assets, including `Fox` and `Dwarf Warrior-Enemy`
 - `NavMeshBaker`:
     This Unity script is used to build a NavMeshSurface every 5 seconds. The script initializes a reference to a NavMeshSurface component in the scene in the public NavMeshSurface variable. The script includes a coroutine that is started in the Start method and runs indefinitely. The coroutine first builds the NavMeshSurface using the BuildNavMesh method. It then waits for 5 seconds using the WaitForSeconds method before building the NavMeshSurface again.
     
-    ## AI Implementations - Xinlu Zhao (xzhao456)
+    ## Overall GUI - Yaqi Tu (ytu64)
 Five GUI have been implemented: a start menu GUI, a difficulty level GUI, a rule GUI, a win GUI and a lose game GUI.
 
 Start menu GUI: including the button and directiosn to the rule GUI, difficulty GUI and control explanations
