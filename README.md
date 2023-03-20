@@ -43,3 +43,7 @@ Besides, the in-game pause menu is installed by pressing the Esc. The in-game pa
 ## 3D Character with Real-Time control Xingyu Chen (xchen863)
 - Updated main camera from first-person perspective to non first -person perspective. Added script ThirdPersonCamera to enable a smooth camera motion and reasonable camera moving speed.
 - Added new motions for the player so it can walk, jump, destroy and turn around. Updated player Animator Controller and Animation. Player speed and rotation speed were also adjusted to maintain consistent spatial simulation throughout. 
+
+## Main Player action - Qing Li (qli423)
+Vincent has incorporated several new features into the game. The Main Character now possesses motion capabilities and is capable of gathering diamond. The diamond that is obtained will be converted into game cards, with two different types being randomly distributed. One of the cards can be utilized to construct a bridge, while the other can be employed to destroy a bridge. Additionally, Vincent have implemented a Win menu that is displayed when the player comes into contact with the final treasure bag. Finally, Vincent added a bagpack that has been added to the game to house all of the cards that the player has accumulated. To view the available cards, players may press the 'B' button to open the bag. 
+
