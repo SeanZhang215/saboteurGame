@@ -34,3 +34,10 @@ lose GUI: including the option to start this level game again and also the butto
 For those buttons, when the mouse is on the button, it will change the color and when the mouse press the button, it will finally change to another color.
 
 Besides, the in-game pause menu is installed by pressing the Esc. The in-game pause includes: pause, back to menu, quit the game.
+
+## 3D Character with Real-Time control & Physics - Shaopeng Zhang (SZHANG737) and Xingyu Chen (xchen863)
+
+- Updated main camera from first-person perspective to non first -person perspective. Added script ThirdPersonCamera to enable a smooth camera motion and reasonable camera moving speed.
+- Added Character Controller script, the player can be better controlled for speed, turning motion, jumping motion, and destroying motion.
+- Added new motions for the player so it can walk, jump, destroy and turn around. Updated player Animator Controller and Animation. Player speed and rotation speed were also adjusted to maintain consistent spatial simulation throughout. 
+- Added a sphere to show 3D simulation with six degrees of freedom movement of rigid bodies. This object has Sphere Collider and Planet Controller script so it can move.
