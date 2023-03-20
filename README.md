@@ -16,4 +16,21 @@ Xinlu Zhao implemented several assets, including `Fox` and `Dwarf Warrior-Enemy`
 - `PathVisualizer`:
     This Unity script visualizes the path of a NavMeshAgent on the game object it is attached to. The script initializes a reference to the NavMeshAgent component on the game object in the Start method. The OnDrawGizmos method draws a blue line between each corner of the path using the Gizmos.DrawLine method. The previousCorner variable is used to keep track of the previous corner to draw a line from, and it is initialized to the game object's position.
 - `NavMeshBaker`:
-    This Unity script is used to build a NavMeshSurface every 5 seconds. The script initializes a reference to a NavMeshSurface component in the scene in the public NavMeshSurface variable. The script includes a coroutine that is started in the Start method and runs indefinitely. The coroutine first builds the NavMeshSurface using the BuildNavMesh method. It then waits for 5 seconds using the WaitForSeconds method before building the NavMeshSurface again. 
+    This Unity script is used to build a NavMeshSurface every 5 seconds. The script initializes a reference to a NavMeshSurface component in the scene in the public NavMeshSurface variable. The script includes a coroutine that is started in the Start method and runs indefinitely. The coroutine first builds the NavMeshSurface using the BuildNavMesh method. It then waits for 5 seconds using the WaitForSeconds method before building the NavMeshSurface again.
+    
+    ## AI Implementations - Xinlu Zhao (xzhao456)
+Five GUI have been implemented: a start menu GUI, a difficulty level GUI, a rule GUI, a win GUI and a lose game GUI.
+
+Start menu GUI: including the button and directiosn to the rule GUI, difficulty GUI and control explanations
+
+Difficutly level GUI: including three levels difficulty, once press the button, the accordingly game will start
+
+Rule GUI: expalnin the rule instructions of the game and button back to the menu
+
+Win GUI: including the option to start this level game again and also the button to back to menu
+
+lose GUI: including the option to start this level game again and also the button to back to menu
+
+For those buttons, when the mouse is on the button, it will change the color and when the mouse press the button, it will finally change to another color.
+
+Besides, the in-game pause menu is installed by pressing the Esc. The in-game pause includes: pause, back to menu, quit the game.
