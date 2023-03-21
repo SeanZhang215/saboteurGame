@@ -29,6 +29,8 @@ Rule GUI: expalnin the rule instructions of the game and button back to the menu
 
 Win GUI: including the option to start this level game again and also the button to back to menu
 
+Main Character - Qing Li  (qli423)
+Vincent has incorporated several new features into the game. The Main Character now possesses motion capabilities and is capable of gathering dimond. The dimond that is obtained will be converted into game cards, with two different types being randomly distributed. One of the cards can be utilized to construct a bridge, while the other can be employed to destroy a bridge. Additionally, we have implemented a Win menu that is displayed when the player comes into contact with the final treasure bag. Finally, a bagpack has been added to the game to house all of the cards that the player has accumulated. To view the available cards, players may press the 'B' button to open the bag.
 lose GUI: including the option to start this level game again and also the button to back to menu
 
 For those buttons, when the mouse is on the button, it will change the color and when the mouse press the button, it will finally change to another color.
