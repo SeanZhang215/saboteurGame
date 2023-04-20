@@ -7,6 +7,7 @@ TagManager:
   - path
   - Star
   - Ground
+  - Destination
   layers:
   - Default
   - TransparentFX

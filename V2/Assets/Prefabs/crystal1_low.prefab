@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23091440014603500}
   - component: {fileID: -5758183238889065999}
   - component: {fileID: -3506250576541585820}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: crystal1_low
   m_TagString: Star
   m_Icon: {fileID: 0}
@@ -30,7 +30,6 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4922359269984256}
   m_Father: {fileID: 0}
@@ -55,7 +54,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -94,11 +92,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446806331479276}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4549642, y: 1.3981874, z: 1.660519}
-  m_Center: {x: 0.04610753, y: 0, z: -0.07789987}
+  m_Size: {x: 0.5644485, y: 2.2452993, z: 0.5928663}
+  m_Center: {x: -0.0049387813, y: 0.61209965, z: 0.02688104}
 --- !u!114 &-3506250576541585820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +121,7 @@ GameObject:
   - component: {fileID: 4922359269984256}
   - component: {fileID: 108987356298303310}
   - component: {fileID: 1831525047414867532}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +138,6 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7311476, z: -0, w: 0.6822193}
   m_LocalPosition: {x: -0.00523708, y: 0.96798635, z: 0.11045694}
   m_LocalScale: {x: 0.62778175, y: 0.62778175, z: 0.6277816}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4740439308569258}
   m_RootOrder: 0
@@ -219,11 +216,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
