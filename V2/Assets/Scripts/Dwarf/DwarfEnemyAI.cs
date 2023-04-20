@@ -21,6 +21,7 @@ public class DwarfEnemyAI : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        navMeshAgent.stoppingDistance = 1f;
     }
 
     void Update()
@@ -59,8 +60,8 @@ public class DwarfEnemyAI : MonoBehaviour
         isDestroyingObject = true;
         animator.SetBool("isDestroying", true);
         yield return new WaitForSeconds(delay);
-        animator.SetBool("isDestroying", false);
         Destroy(obj);
+        animator.SetBool("isDestroying", false); // Set isDestroying to false immediately after destroying the object
         isDestroyingObject = false;
 
         starsDestroyed++;
