@@ -4,7 +4,7 @@
 The start scene is `IntroMenu` file under `Assets/Scene/`.
 
 ## How to play and what parts of the level to observe technology requirements
-To start the game, go to the Start Menu and try to defeat the Non-Playable Character (NPC) while collecting the ore they throw on the bridge. Each ore you collect will be converted into a card, with an equal chance of getting either a Destroy card or a Build card. The Destroy card can be used to destroy the bridge, while the Build card can be used to construct a bridge. The card will affect the bridge randomly. Keep track of your available cards and, once a bridge is built, try to beat the NPC and reach the treasure bag before them. Remember whoever reaches the treasure bag first wins the game.  Additionally, you can use the Destroy card to eliminate the bridge and defeat the NPC, thereby winning the game.
+To start the game, go to the Start Menu and try to defeat the Non-Playable Character (NPC) while collecting the ore they throw on the bridge. Each ore you collect will be converted into a card, with an equal chance of getting either a Destroy card or a Build card. The Destroy card can be used to destroy the bridge, while the Build card can be used to construct a bridge. The card will either have bridge underneath appear or make bridge disappear. Keep track of your available cards and, once a bridge is built, try to beat the NPC and reach the treasure bag before them. Remember whoever reaches the treasure bag first wins the game.  Additionally, you can use the Destroy card to eliminate the bridge and defeat the NPC, thereby winning the game.
 
 ## Known problem areas
 Occasionally, certain enemies may become trapped in the game.
@@ -59,5 +59,7 @@ Besides, the in-game pause menu is installed by pressing the Esc. The in-game pa
 - Worked with Shaopeng Zhang on Herballist Bag to add Destructible Object script so the Herballist Bag can be destructible.
 
 ## Main Character - Qing Li  (qli423)
-
-Vincent has incorporated several new features into the game. The Main Character now possesses motion capabilities and is capable of gathering dimond. The dimond that is obtained will be converted into game cards, with two different types being randomly distributed. One of the cards can be utilized to construct a bridge, while the other can be employed to destroy a bridge. Additionally, we have implemented a Win menu that is displayed when the player comes into contact with the final treasure bag. Finally, a bagpack has been added to the game to house all of the cards that the player has accumulated. To view the available cards, players may press the 'B' button to open the bag.
+Fixed bug that user unable to dig dimond. Also updated the logic of how card affect the bridge. 
+Fixed menu bug, now user fall under bridge the game failed menu will appear. 
+--
+Vincent has incorporated several new features into the game. The Main Character now possesses motion capabilities and is capable of gathering dimond. The dimond that is obtained will be converted into game cards, with two different types being randomly distributed. One of the cards can be utilized to construct a bridge, while the other can be employed to destroy a bridge. Additionally, we have implemented a Win menu that is displayed when the player comes into contact with the final treasure bag. Finally, a bagpack has been added to the game to house all of the cards that the player has accumulated. To view the available cards, players may press the 'B' button to open the bag. 
