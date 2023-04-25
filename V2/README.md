@@ -14,6 +14,7 @@ The game used many unity models from unity store.
 The game also built upon a unity tutorial. (game shooting).
 
 ## AI Implementations - Xinlu Zhao (xzhao456)
+### Alpha
 We have implemented two AI-controlled non-player characters (NPCs): a fox and a dwarf enemy. The fox has a single state of continuous movement, with random directional changes, and will periodically drop ores. The dwarf enemy, on the other hand, has three states: idle, walking, and digging. We have designed the locomotion of both NPCs to be smooth, utilizing predominantly root motion for humanoid characters.
 
 The primary task of the dwarf enemy is to determine its ability to reach a destination. If it can reach a destination, it will navigate to it using pathfinding techniques. If not, it will prioritize obtaining the nearest available ore. Once a certain number of ores have been collected, the dwarf enemy can construct a new bridge.
@@ -29,7 +30,9 @@ Xinlu Zhao implemented several assets, including `Fox` and `Dwarf Warrior-Enemy`
     This Unity script visualizes the path of a NavMeshAgent on the game object it is attached to. The script initializes a reference to the NavMeshAgent component on the game object in the Start method. The OnDrawGizmos method draws a blue line between each corner of the path using the Gizmos.DrawLine method. The previousCorner variable is used to keep track of the previous corner to draw a line from, and it is initialized to the game object's position.
 - `NavMeshBaker`:
     This Unity script is used to build a NavMeshSurface every 5 seconds. The script initializes a reference to a NavMeshSurface component in the scene in the public NavMeshSurface variable. The script includes a coroutine that is started in the Start method and runs indefinitely. The coroutine first builds the NavMeshSurface using the BuildNavMesh method. It then waits for 5 seconds using the WaitForSeconds method before building the NavMeshSurface again.
-    
+### Improvements
+Xinlu has added colliders to both the NPC and the diamond to make the game more realistic and engaging. The colliders help to ensure that the player interacts with the game elements in a more natural way. This means that players will no longer be able to pass through the NPC or diamond, which will improve the overall gaming experience. Xinlu has also made significant changes to the AI logic. The NPC will now be able to detect the player's position and adjust its behavior accordingly. This means that the NPC will follow the player around, making the game more challenging and engaging. 
+
 ## Overall GUI - Yaqi Tu (ytu64)
 Five GUI have been implemented: a start menu GUI, a difficulty level GUI, a rule GUI, a win GUI and a lose game GUI.
 
